@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Box Food | Fresh. Fast. Flavorful. | Rampur, Uttar Pradesh</title>
+    <meta name="description" content="White Box Food offers fresh, fast, and flavorful fast food in Rampur, Uttar Pradesh. Open daily 12 PM to 12 AM. Order via WhatsApp +9528322426.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-red: #c62828;
+            --dark-red: #8e0000;
+            --mustard: #ffb300;
+            --light-mustard: #ffd54f;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #333333;
+            --text-color: #333333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        /* Header & Navbar */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary-red);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-red);
+        }
+        
+        .logo-text span {
+            color: var(--mustard);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-red);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 1rem;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--mustard);
+            font-weight: 600;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background-color: var(--primary-red);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-mustard {
+            background-color: var(--mustard);
+            color: var(--dark-gray);
+        }
+        
+        .btn-mustard:hover {
+            background-color: var(--light-mustard);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-red);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--mustard);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Why Choose Us */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        /* Menu Items */
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .menu-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .menu-img {
+            height: 200px;
+            width: 100%;
+            background-color: var(--medium-gray);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .menu-content {
+            padding: 1.5rem;
+        }
+        
+        .menu-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-red);
+        }
+        
+        .menu-content p {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .price-order {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+        
+        /* Daily Combos & Chef's Picks */
+        .combos, .chef-picks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .combo-card, .chef-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .discount-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--mustard);
+            color: var(--dark-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 2;
+        }
+        
+        .rating {
+            color: var(--mustard);
+            margin: 1rem 0;
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background-color: var(--medium-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Testimonials */
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 3rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin: 0 1rem;
+        }
+        
+        .customer-name {
+            font-weight: 600;
+            margin-top: 1rem;
+            color: var(--dark-red);
+        }
+        
+        /* Catering & Events */
+        .catering {
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+        
+        /* Map & Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info h3 {
+            color: var(--dark-red);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary-red);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--primary-red);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-5px);
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--dark-red);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 5%;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 0.9rem 1.5rem;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .newsletter-btn {
+            padding: 0.9rem 2rem;
+            background-color: var(--mustard);
+            color: var(--dark-gray);
+            border: none;
+            border-radius: 0 50px 50px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-btn:hover {
+            background-color: var(--light-mustard);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-column h3 {
+            color: var(--mustard);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--mustard);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--medium-gray);
+        }
+        
+        /* Call Button */
+        .call-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--mustard);
+            color: var(--dark-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        
+        .call-button:hover {
+            background-color: var(--light-mustard);
+            transform: scale(1.1);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tagline {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: var(--shadow);
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input, .newsletter-btn {
+                width: 100%;
+                border-radius: 50px;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            section {
+                padding: 3rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">W</div>
+                <div class="logo-text">White<span>Box</span></div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#catering">Catering</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to White Box Food</h1>
+            <div class="tagline">Fresh. Fast. Flavorful.</div>
+            <p>Where every bite counts! Experience the best fast food in Rampur, Uttar Pradesh.</p>
+            <a href="https://wa.me/9528322426?text=Hi%20White%20Box%20Food!%20I%20want%20to%20place%20an%20order." class="btn" target="_blank">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Fresh Ingredients</h3>
+                <p>We use only the freshest, highest quality ingredients in all our dishes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Fast Service</h3>
+                <p>Get your food quickly without compromising on quality or taste.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Signature Taste</h3>
+                <p>Our unique recipes and cooking techniques create unforgettable flavors.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Loved Locally</h3>
+                <p>We're proud to be a favorite fast food spot in Rampur, Uttar Pradesh.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview -->
+    <section id="menu">
+        <h2 class="section-title">Our Popular Items</h2>
+        <div class="menu-items">
+            <!-- Menu items will be loaded dynamically -->
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#full-menu" class="btn btn-mustard">View Full Menu</a>
+        </div>
+    </section>
+
+    <!-- Daily Combo Deals -->
+    <section style="background-color: var(--light-gray);">
+        <h2 class="section-title">Daily Combo Deals</h2>
+        <div class="combos">
+            <!-- Combo items will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Chef's Picks -->
+    <section>
+        <h2 class="section-title">Chef's Picks</h2>
+        <div class="chef-picks">
+            <!-- Chef's picks will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <h2 class="section-title">Food Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Gallery items will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="background-color: var(--light-gray);">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="testimonial-slider">
+            <!-- Testimonials will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Catering & Events -->
+    <section id="catering">
+        <h2 class="section-title">Catering & Events</h2>
+        <div class="catering">
+            <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+                Planning an event? Let White Box Food cater your next party, meeting, or special occasion. 
+                We offer customized meal packages that will impress your guests and make your event memorable.
+            </p>
+            <a href="https://wa.me/9528322426?text=Hi%20White%20Box%20Food!%20I%20want%20to%20get%20a%20quote%20for%20catering." class="btn" target="_blank">Request Quote</a>
+        </div>
+    </section>
+
+    <!-- Map & Contact -->
+    <section id="contact">
+        <h2 class="section-title">Find Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-detail">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>244901 Rampur, Uttar Pradesh</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+9528322426</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <p>12 PM – 12 AM (Monday to Sunday)</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 2rem;">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="tel:+9528322426" class="btn">Call Now</a>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.325620183185!2d79.026725315115!3d28.888058781628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3900b5b5d1d1f1f1%3A0x1c1c1c1c1c1c1c1c!2sRampur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive deals, new menu items, and special offers.</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>White Box Food</h3>
+                <p>Fresh. Fast. Flavorful. Serving Rampur, Uttar Pradesh with the best fast food experience since 2020.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#catering">Catering</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Opening Hours</h3>
+                <ul class="footer-links">
+                    <li>Monday: 12 PM – 12 AM</li>
+                    <li>Tuesday: 12 PM – 12 AM</li>
+                    <li>Wednesday: 12 PM – 12 AM</li>
+                    <li>Thursday: 12 PM – 12 AM</li>
+                    <li>Friday: 12 PM – 12 AM</li>
+                    <li>Saturday: 12 PM – 12 AM</li>
+                    <li>Sunday: 12 PM – 12 AM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 White Box Food. All rights reserved. | Designed with ❤️ for food lovers</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Call Button -->
+    <a href="tel:+9528322426" class="call-button">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/9528322426?text=Hi%20White%20Box%20Food!%20I%20want%20to%20place%20an%20order." class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Full Menu Section (for page navigation) -->
+    <section id="full-menu" style="display: none;">
+        <h2 class="section-title">Full Menu</h2>
+        <div class="menu-items">
+            <!-- Full menu items will be loaded dynamically -->
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = newsletterForm.querySelector('.newsletter-input').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive our updates soon.`);
+            newsletterForm.reset();
+        });
+        
+        // Data for the website
+        const menuItems = [
+            {
+                id: 1,
+                name: "Zinger Burger",
+                description: "Crispy chicken fillet with fresh lettuce, mayo, and our special sauce in a soft bun.",
+                price: "₹180",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80",
+                category: "burger"
+            },
+            {
+                id: 2,
+                name: "Beef Cheese Burger",
+                description: "Juicy beef patty with melted cheese, onions, pickles, and ketchup.",
+                price: "₹220",
+                image: "image/beef.jpeg",
+                category: "burger"
+            },
+            {
+                id: 3,
+                name: "Shawarma Wrap",
+                description: "Spiced chicken or beef wrapped in pita bread with garlic sauce and veggies.",
+                price: "₹150",
+                image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+                category: "wrap"
+            },
+            {
+                id: 4,
+                name: "Loaded Fries",
+                description: "Crispy fries topped with cheese, jalapeños, and our special sauce.",
+                price: "₹120",
+                image: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+                category: "sides"
+            },
+            {
+                id: 5,
+                name: "Choco Lava Cake",
+                description: "Warm chocolate cake with a molten chocolate center, served with vanilla ice cream.",
+                price: "₹160",
+                image: "https://images.unsplash.com/photo-1624353365286-3f8d62dadadf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+                category: "dessert"
+            },
+            {
+                id: 6,
+                name: "Chicken Pizza",
+                description: "Thin crust pizza with chicken, bell peppers, onions, and melted cheese.",
+                price: "₹280",
+                image: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+                category: "pizza"
+            },
+            {
+                id: 7,
+                name: "Grilled Sandwich",
+                description: "Toasted sandwich with cheese, vegetables, and your choice of filling.",
+                price: "₹130",
+                image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80",
+                category: "sandwich"
+            },
+            {
+                id: 8,
+                name: "Chicken Wings",
+                description: "Crispy chicken wings tossed in your choice of BBQ, spicy, or garlic sauce.",
+                price: "₹200",
+                image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+                category: "sides"
+            }
+        ];
+        
+        const comboDeals = [
+            {
+                name: "Family Feast Combo",
+                description: "2 Zinger Burgers, 1 Beef Cheese Burger, 2 Shawarma Wraps, Large Loaded Fries, and 2 Choco Lava Cakes.",
+                originalPrice: "₹1210",
+                discountPrice: "₹999",
+                discount: "17% OFF",
+                image: "image/cheese.jpeg",
+            },
+            {
+                name: "Burger Lovers Combo",
+                description: "2 Zinger Burgers, 1 Beef Cheese Burger, Large Fries, and 2 Soft Drinks.",
+                originalPrice: "₹700",
+                discountPrice: "₹599",
+                discount: "14% OFF",
+                image: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80"
+            },
+            {
+                name: "Quick Lunch Combo",
+                description: "1 Shawarma Wrap, 1 Grilled Sandwich, Fries, and 1 Soft Drink.",
+                originalPrice: "₹400",
+                discountPrice: "₹349",
+                discount: "13% OFF",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80"
+            }
+        ];
+        
+        const chefPicks = [
+            {
+                name: "Special Zinger Burger",
+                description: "Our chef's special twist on the classic Zinger Burger with extra spices and a secret sauce that has been in our family recipe for generations. This burger has won the 'Best Burger in Rampur' award three years in a row.",
+                rating: 5,
+                image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80"
+            },
+            {
+                name: "Signature Shawarma",
+                description: "Our shawarma recipe comes straight from the Middle East, with marinated meat cooked on a vertical rotisserie for hours to perfection. Served with homemade garlic sauce that keeps customers coming back for more.",
+                rating: 5,
+                image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Ultimate Loaded Fries",
+                description: "What started as a late-night experiment by our chef has become our most requested side dish. Crispy fries loaded with three types of cheese, jalapeños, bacon bits, and our signature spicy mayo.",
+                rating: 4,
+                image: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            }
+        ];
+        
+        const galleryImages = [
+            "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80",
+            "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+            "https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
+            "https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
+            "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+        ];
+        
+        const testimonials = [
+            {
+                name: "Rajesh Kumar",
+                text: "The best fast food in Rampur! Their Zinger Burger is absolutely delicious. I order from White Box Food at least twice a week.",
+                rating: 5
+            },
+            {
+                name: "Priya Sharma",
+                text: "Fresh ingredients and fast delivery. The Shawarma Wrap is my favorite. Highly recommend White Box Food!",
+                rating: 5
+            },
+            {
+                name: "Amit Singh",
+                text: "Their combo deals are amazing value for money. The food is always hot and tasty. My go-to place for quick meals.",
+                rating: 4
+            }
+        ];
+        
+        // Function to create WhatsApp link
+        function createWhatsAppLink(itemName) {
+            return `https://wa.me/9528322426?text=Hi%20White%20Box%20Food!%20I%20want%20to%20order%20a%20${encodeURIComponent(itemName)}.`;
+        }
+        
+        // Function to create star rating HTML
+        function createStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<i class="fas fa-star"></i>';
+                } else {
+                    stars += '<i class="far fa-star"></i>';
+                }
+            }
+            return `<div class="rating">${stars}</div>`;
+        }
+        
+        // Load menu items
+        function loadMenuItems() {
+            const menuContainer = document.querySelector('#menu .menu-items');
+            const fullMenuContainer = document.querySelector('#full-menu .menu-items');
+            
+            menuItems.forEach((item, index) => {
+                const menuCard = document.createElement('div');
+                menuCard.className = 'menu-card';
+                menuCard.innerHTML = `
+                    <div class="menu-img" style="background-image: url('${item.image}');"></div>
+                    <div class="menu-content">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <div class="price-order">
+                            <div class="price">${item.price}</div>
+                            <a href="${createWhatsAppLink(item.name)}" class="btn" target="_blank">Order Now</a>
+                        </div>
+                    </div>
+                `;
+                
+                // Add to main menu preview (first 4 items)
+                if (index < 4) {
+                    menuContainer.appendChild(menuCard.cloneNode(true));
+                }
+                
+                // Add to full menu
+                if (fullMenuContainer) {
+                    fullMenuContainer.appendChild(menuCard);
+                }
+            });
+        }
+        
+        // Load combo deals
+        function loadComboDeals() {
+            const combosContainer = document.querySelector('.combos');
+            
+            comboDeals.forEach(combo => {
+                const comboCard = document.createElement('div');
+                comboCard.className = 'combo-card';
+                comboCard.innerHTML = `
+                    <div class="discount-tag">${combo.discount}</div>
+                    <div class="menu-img" style="background-image: url('${combo.image}');"></div>
+                    <div class="menu-content">
+                        <h3>${combo.name}</h3>
+                        <p>${combo.description}</p>
+                        <div class="price-order">
+                            <div>
+                                <div class="price" style="color: var(--dark-red);">${combo.discountPrice}</div>
+                                <div style="text-decoration: line-through; color: var(--dark-gray); font-size: 0.9rem;">${combo.originalPrice}</div>
+                            </div>
+                            <a href="${createWhatsAppLink(combo.name)}" class="btn" target="_blank">Order Now</a>
+                        </div>
+                    </div>
+                `;
+                combosContainer.appendChild(comboCard);
+            });
+        }
+        
+        // Load chef's picks
+        function loadChefPicks() {
+            const chefPicksContainer = document.querySelector('.chef-picks');
+            
+            chefPicks.forEach(item => {
+                const chefCard = document.createElement('div');
+                chefCard.className = 'chef-card';
+                chefCard.innerHTML = `
+                    <div class="menu-img" style="background-image: url('${item.image}');"></div>
+                    <div class="menu-content">
+                        <h3>${item.name}</h3>
+                        ${createStarRating(item.rating)}
+                        <p>${item.description}</p>
+                        <div style="text-align: center; margin-top: 1.5rem;">
+                            <a href="${createWhatsAppLink(item.name)}" class="btn" target="_blank">Order Now</a>
+                        </div>
+                    </div>
+                `;
+                chefPicksContainer.appendChild(chefCard);
+            });
+        }
+        
+        // Load gallery
+        function loadGallery() {
+            const galleryContainer = document.querySelector('.gallery-grid');
+            
+            galleryImages.forEach(image => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.style.backgroundImage = `url('${image}')`;
+                galleryItem.style.backgroundSize = 'cover';
+                galleryItem.style.backgroundPosition = 'center';
+                
+                // Add click event for lightbox effect (simplified)
+                galleryItem.addEventListener('click', () => {
+                    window.open(image, '_blank');
+                });
+                
+                galleryContainer.appendChild(galleryItem);
+            });
+        }
+        
+        // Load testimonials
+        function loadTestimonials() {
+            const testimonialContainer = document.querySelector('.testimonial-slider');
+            
+            testimonials.forEach(testimonial => {
+                const testimonialDiv = document.createElement('div');
+                testimonialDiv.className = 'testimonial';
+                testimonialDiv.innerHTML = `
+                    ${createStarRating(testimonial.rating)}
+                    <p>"${testimonial.text}"</p>
+                    <div class="customer-name">- ${testimonial.name}</div>
+                `;
+                testimonialContainer.appendChild(testimonialDiv);
+            });
+        }
+        
+        // Initialize all content
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMenuItems();
+            loadComboDeals();
+            loadChefPicks();
+            loadGallery();
+            loadTestimonials();
+            
+            // Lazy loading for images
+            const images = document.querySelectorAll('.menu-img, .gallery-item');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.opacity = 1;
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            images.forEach(img => {
+                img.style.opacity = 0;
+                img.style.transition = 'opacity 0.5s ease';
+                imageObserver.observe(img);
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
